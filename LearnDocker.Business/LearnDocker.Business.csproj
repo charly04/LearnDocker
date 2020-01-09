@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LearnDocker.Data\LearnDocker.Data.csproj" />
+  </ItemGroup>
+
 </Project>
