@@ -8,6 +8,10 @@ namespace LearnDocker.Data.Repositories
 {
     public interface ICandidateRepository
     {
-        public Task<Candidate> Get(string id);
+        public Task<Candidate> Get(int id);
+        public Task<List<Candidate>> GetAll();
+        public Task<Candidate> Add(Candidate request);
+        public Task<int> Remove(int id);
+        public Task<Candidate> Update(Candidate candidate, int id);
     }
 }

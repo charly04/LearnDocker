@@ -17,15 +17,22 @@ namespace LearnDocker.API
                 return;   // DB has been seeded
             }
 
-            var candidate = new Candidate()
+            var candidate1 = new Candidate()
             {
-                ID = "1",
                 Name = "Auto",
                 Surname = "Generated",
                 Address = "Yeah street",
                 BirthDate = DateTime.UtcNow
             };
-            context.Candidates.Add(candidate);
+            var candidate2 = new Candidate()
+            {
+                Name = "Auto2",
+                Surname = "Generated2",
+                Address = "Yeah street2",
+                BirthDate = DateTime.UtcNow
+            };
+            context.Candidates.Add(candidate1);
+            context.Candidates.Add(candidate2);
             context.SaveChanges();
         }
     }

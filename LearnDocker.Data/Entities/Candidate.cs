@@ -1,10 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LearnDocker.Data.Entities
 {
     public class Candidate
     {
-        public string ID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime BirthDate { get; set; }
@@ -18,7 +20,7 @@ namespace LearnDocker.Data.Entities
         {
             if (mock)
             {
-                ID = "1";
+                Id = 1;
                 Name = "Charly";
                 Surname = "Zero Four";
                 BirthDate = DateTime.UtcNow;
